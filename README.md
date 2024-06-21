@@ -1,6 +1,6 @@
 # EVENT LOOP
 
-이벤트 루프 개념 설명
+[이벤트 루프 개념 설명](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
 ## 실행 방법
 
