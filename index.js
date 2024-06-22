@@ -1,4 +1,5 @@
 const http = require("http");
+const fs = require("fs");
 
 // reference: https://www.youtube.com/watch?v=8aGhZQkoFbQ
 // blocking
@@ -24,7 +25,13 @@ setTimeout(() => {
 http
   .createServer((req, res) => {
     if (req.url === "/") {
-      res.end();
+      fs.readFile("./index.txt", (err, data) => {
+        if (err) {
+          throw err;
+        }
+        res.write(data);
+        res.end();
+      });
     }
   })
   .listen(3000, () => {
